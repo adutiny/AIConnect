@@ -1,0 +1,106 @@
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<style>
+    body {
+        max-width: 100%;
+        padding: 20px;
+    }
+</style>
+<nav>
+  <nav style="text-align: center;">
+    <ul>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/" style="font-size: 1.2rem; color: #FFF;">Home</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/about" style="font-size: 1.2rem; color: #FFF;">About</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/contact" style="font-size: 1.2rem; color: #FFF;">Contact</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/AIADDONS" style="font-size: 1.2rem; color: #FFF;">FAQ</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/feedback" style="font-size: 1.2rem; color: #FFF;">Feedback</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/prompt" style="font-size: 1.2rem; color: #FFF;">Prompt Training</a></li>
+      <!-- <li style="display: inline-block; margin-right: 30px;"><a href="/login" style="font-size: 1.2rem; color: #FFF;">Login to your Account</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/sign_up" style="font-size: 1.2rem; color: #FFF;">Sign Up!</a></li> -->
+    </ul>
+  </nav> 
+<style>
+  label {
+    color: white;
+    font-size: larger;
+    text-align: center;
+  }
+  body {
+    background: linear-gradient(90deg, #000000 70%, gray 30%);
+    color: white; /* white text */
+    font-family: Santral, W01;
+  }
+ 
+</style>
+
+
+</html>
+
+
+   
+
+<div style="margin: 0 auto; width: max-content;">
+  <h1>We'll be in contact soon! Or if you have more questions</h1>
+   
+  <h2>Let's Chat</h2><br>
+
+ {% if response %}
+    
+    <p><span id="user_name"></span>: {{user_input}}</p>
+    <p>AI Email: {{response}}</p>
+    <br>
+    <script>
+      document.getElementById('user_name').innerHTML = localStorage.getItem('name');  
+    </script>
+  
+    {% else %}
+    
+
+
+<!--<label for="name">We are AI Email, What's your name?</label> -->
+
+
+
+<!--<input type="text" id="name" placeholder="Type your name please"> -->
+
+<p id="first_response"></p>
+
+<script>
+  document.getElementById('name').addEventListener('keypress', function(e) {
+    if (e.keyCode === 13) {
+      let name = document.getElementById('name').value;
+      document.getElementById('first_response').innerHTML = 'Hi ' + name + '! How can I help you today?';
+      localStorage.setItem('name', name);
+    }
+  });
+</script>
+
+
+
+
+    <p id="first_response" style="color:white;"></p>
+    
+    {% endif %}
+  </div>
+  
+  
+  
+    <form action="/response" onsubmit="return false;">
+      <style>
+        p {
+          color: white;
+        }
+      </style>
+      <p>Ask me a Question<br>
+  
+      <textarea placeholder='Hi type your questions here' name="res" rows="2" cols="30" onkeypress="if(event.keyCode === 13) this.form.submit()"></textarea>
+       
+        
+  </form>
+</form> 
+
+
+   
+	<div class="container">
+    <div style="text-align:center;">
+  
+  </div>

@@ -1,0 +1,332 @@
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<style>
+    body {
+        max-width: 100%;
+        padding: 20px;
+    }
+</style>
+
+  
+     
+
+  <Title>AI Connect</Title>
+
+  <nav style="text-align: center;">
+    <ul>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/" style="font-size: 1.2rem; color: #FFF;">Home</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/about" style="font-size: 1.2rem; color: #FFF;">About</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/contact" style="font-size: 1.2rem; color: #FFF;">Contact</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/AIaddons" style="font-size: 1.2rem; color: #FFF;">FAQ</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/feedback" style="font-size: 1.2rem; color: #FFF;">Feedback</a></li>
+      <!--<li style="display: inline-block; margin-right: 30px;"><a href="/prompt" style="font-size: 1.2rem; color: #FFF;">Prompt Training</a></li> -->
+      <!-- <li style="display: inline-block; margin-right: 30px;"><a href="/login" style="font-size: 1.2rem; color: #FFF;">Login to your Account</a></li>
+      <li style="display: inline-block; margin-right: 30px;"><a href="/sign_up" style="font-size: 1.2rem; color: #FFF;">Sign Up!</a></li> -->
+    </ul>
+  </nav>
+
+  
+
+
+  <title><center>Let's Chat</center></title>
+  
+    
+  
+  
+	
+	<style>
+		body {
+    
+       background: linear-gradient(80deg, #000000  500%, gray 50%);/* */
+			color: #000; /* white text */
+			font-family: Santral, W01;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: bold;
+		}
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 50px 20px;
+		}
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+		}
+		.col {
+			flex: 1;
+			padding: 0 15px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.col h2 {
+			font-size: 36px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		.col p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 30px;
+		}
+		.button {
+			display: inline-block;
+			background-color: #fff;
+			color: #000;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			transition: all 0.3s ease;
+      href = "#card-element"
+			onclick="window.location.href=this.href;"
+		}
+		.button:hover {
+			background-color: #000;
+			color: #fff;
+		}
+		
+    
+
+    .contact-form {
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 5px;
+			text-align: center;
+		}
+		.contact-form input[type="text"], 
+		.contact-form textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			font-size: 18px;
+			font-family: Arial, sans-serif;
+			resize: none;
+		}
+		.contact-form input[type="submit"] {
+			background-color: #000;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.contact-form input[type="submit"]:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	</style>
+</head>
+
+
+  
+
+
+
+<body>
+  <div style ="color:yellowgreen;">
+
+    <h1 style="color:yellowgreen;">COMING SOON!</h1>
+    
+
+   
+
+    <h2 style="color:yellowgreen;">We Are AI Connect. Book a FREE Consultation Now</h2>
+    <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 12px;">Book FREE Consultation</a><br><br><br>
+
+
+
+<h2 style="text-align: center;">Let's Chat</h2><br>
+
+
+
+<input type="text-align: center;" id="name" placeholder="Type your name please">
+
+
+<p id="first_response"></p>
+
+<script>
+  document.getElementById('name').addEventListener('keypress', function(e) {
+    if (e.keyCode === 13) {
+      let name = document.getElementById('name').value,
+      document,getElementById('first_response').innerHTML = 'Hi ' + name + '! How can I help you today?';
+      localStorage.setItem('name', name);
+    }
+  });
+</script>
+
+
+
+
+
+{% if response %}
+   
+   <p><span id="user_name"></span>: {{user_input}}</p>
+   <p> {{response}}</p>
+   <br>
+   <script>
+     document.getElementById('user_name').innerHTML = localStorage.getItem('name');  
+   </script>
+ 
+   {% else %}
+   
+
+<!--
+<label for="name">Your Company Name, What's your name?</label>
+
+
+
+<input type="text" id="name" placeholder="Type your name please">
+-->
+
+<p id="first_response"></p>
+
+<script>
+ document.getElementById('name').addEventListener('keypress', function(e) {
+   if (e.keyCode === 13) {
+     let name = document.getElementById('name').value;
+     document.getElementById('first_response').innerHTML = 'Hi ' + name + '! How can I help you today?';
+     localStorage.setItem('name', name);
+   }
+ });
+</script>
+
+
+
+
+   <p id="first_response" style="color:red;"></p>
+   
+   {% endif %}
+ </div>
+ 
+ 
+ 
+   <form action="/response" onsubmit="return false;">
+     <style>
+       p {
+         color:yellowgreen;
+       }
+     </style>
+     <p>Ask me a Question<br>
+ 
+     <textarea placeholder='Hi type your questions here' name="res" rows="2" cols="15" onkeypress="if(event.keyCode === 13) this.form.submit()"></textarea>
+      
+       
+ </form>
+</form> 
+ 
+ 
+</body>
+</html>
+   
+<div class="container">
+  <div style="text-align:center;">
+    <h1 style="color:yellowgreen;">Welcome to AI Connect </h1>
+    <h3 style="color:white;font-weight:bold;"> Our Automated and AI-powered tools ate accurate fast and inexpensive solutions.<br><br> 
+      * AUTOMATE: Inventory, Invoicing, Scheduling, web scraping and more. Are you or your employees performing the same tasks over and over again?<br>
+      * SAVES MONEY: Imagine paying someone $49.99 a month to answer your incoming emails or incoming phone calls or chatting online. <br>
+      * SAVES TIME: AI generates accurate responses much faster than a human, so you can save time by letting it do the work.<br>
+      * IMPROVES CUSTOMER SERVICE: Faster and more accurate than employees. Which improves customer satisfaction.<br>
+      * INCREASES PRODUCTIVITY: AI and Automation frees up your time so you can focus on working with ready to buy clients and growing your business.<br>
+      * ACCURATE: Our AI chatbot is up to 95% accurate. According to recent studies, depending on the individual, humans are anywhere from 60% to 90% accurate.<br>
+      * INDIVIDUAL PERSONAL RESPONES: Answers accurately and specific questions asked by your customers. Not a template one size impersonal reply. 
+      </h3>
+  </div><br><br>
+
+
+  <h2 style="color:yellowgreen;">FREE Consultation on how AI and Automation can help your business thrive. Don't get left behind. We specialize in working with small and new businesses</h2>
+    <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 12px;">Book FREE Consultation</a><br><br><br>
+                 <!--<a href="#card-element" class="button" style="color: red">Buy Now</a><br><br> -->
+
+ 
+
+  <h2 style="color:yellowgreen;">AI Chatbot for your website</h2>
+    <p style="color:white;font-weight:bold;">50 AI Chatbot communications a day $49.99 a month...more avaiable @ .10 each.<br>
+      Our chatbot will anwer questions about your business 24/7 and gather contact info.<br>
+      Try our chatbot above, it is trained to our company just like we would train yours to your business.<br>
+    <h3 style="color:yellowgreen;"> If you are interested in learning more about our AI Chatbot, </h3><br> 
+    <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 12px;">Book FREE Demo</a><br><br><br>
+                 <!--<a href="#card-element" class="button" style="color: red">Buy Now</a><br><br> -->
+
+
+
+
+
+    <h2 style="color:yellowgreen;">AI Text Coming Soon!</h2>
+    <p style="color:white;font-weight:bold;">50 AI Text communications a day for $49.99 a month... more avaiable @ .10 each. Let AI Test answer your phone calls<br>
+      When people call into your company AI Text will answer the phone and ask the caller what they need help with.<br>
+      AI Text will then text you the callers name and phone number and what they need help with.<br>
+       <h3 style="color:yellowgreen;"> If you are interested in learning more about our AI Text, </h3><br>
+       <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 12px;">Book FREE Demo</a><br><br><br> 
+                 <!--<a href="#card-element" class="button" style="color: red">Buy Now</a><br><br> -->
+
+
+
+  <!-- Web 
+  <h2 style="color:yellowgreen;">Website Bundle</h2>
+
+    <p style="color:white;">50 AI communications a day more avaiable @ .15 each. You get One static website up to 4 pages: This includes the design, development, and hosting of a static<br>
+        website with up to 4 pages.<br>
+        AI Chatbot embedded in website: This includes the integration of an AI chatbot into the website, which will allow visitors<br>
+        to interact with the chatbot and get answers to their questions.<br>
+        AI contact page with auto AI email response: This includes the creation of a contact page on the website, which will allow<br>
+        visitors to submit contact information and receive an auto AI email response.<br>
+        Web to lead creation profile file: This includes the creation of a profile file that will be used to track leads generated from the website.<br>
+        Hosting costs: This includes the cost of hosting the website and the AI chatbot.<br>
+        AI costs: This includes the cost of the AI chatbot software.<br>
+        Once monthly updates to website: This includes one monthly update to the website, which will include changes to the content, design,<br>
+        or functionality of the website.<br>
+        Domain Cost: This includes the cost of the domain name for the website.<br>
+        Website maintenance: This includes the ongoing maintenance of the website, such as security updates and bug fixes.</p><br><br>
+
+        <p style="color:white;font-weight:bold;">New Business Package monthly fee $59.99<br>
+
+  
+    
+
+     <a href="#card-element" class="button" style="color: red">Buy Web Bundle</a><br><br> 
+        -->
+
+<!-- AI Email replies -->    
+ 
+<h2 style="color:yellowgreen;">AI auto Email replies</h2>
+    
+       <p style="color:white;">50 AI Email communications a day for  $49.99 a month...more communications available @ .10 each.<br>
+        The AI will analyze the context of your emails and generate responses that are relevant and accurate.<br>
+        Works 24/7: The AI is always available to generate responses, even when you're not.<br>
+           <h3 style="color:yellowgreen;"> If you are interested in learning more about our AI Email.</a></h3><br> 
+            <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 12px;">Book FREE Demo,</a><br><br><br>
+                   <!--<a href="#card-element" class="button" style="color: red">Buy Now</a><br><br> -->
+
+
+
+  <div class="bundles">
+    <div class="bundle">
+      <h2 style="color:yellowgreen;">Bundle</h2>
+      
+      <p style="color:white;font-weight:bold;">150 AI communications a day for  $109.99 a month...more communications available @ .10 each.<br>
+        AI automated email reply.<br>
+        Prompt trained AI reply<br>
+        AI Text Coming Soon will be added at no additional cost<br
+        Save $29.98 a month<br>
+        <h3 style="color:yellowgreen;"> If you are interested in learning more about our AI Email, </h3><br> 
+        <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 12px;">Book FREE Demo</a><br><br><br>
+      <!--<a href="#card-element" class="button" style="color: red">Buy Now</a><br><br> -->
+
+    
+    </div>
+      
+    
+    
+    </div>
+  </div>
+</div>
+  
+    
